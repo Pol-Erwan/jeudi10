@@ -47,23 +47,6 @@ def get_townhall_email
   return townhall_email
 end
 
-def hashage(townhall_email,townhall)# je créé un hash alimentant un tableau
-  i = 0
-  email = townhall_email
-  nom_ville = townhall
-  tableau_ville_mail = []
-  
-  while i < get_townhall_email.length
-    nouveau_hash = Hash.new()
-    nouveau_hash[tableau_ville_mail[i].text] = email[i].text
-    tableau_ville_mail << nouveau_hash
-    i += 1
-  end
-  puts tableau_ville_mail
-  return tableau_ville_mail
-end
-
-
 def hashage2 (townhall_email,townhall)
 
         tempory_hash = Hash.new                                                           #créa new tabH
@@ -75,8 +58,7 @@ def hashage2 (townhall_email,townhall)
                   print "{ #{temp_hash [0]}"
                   puts " => #{temp_hash [1]} },"
                 end  
-	end
-            
+	end  
         return tempory_hash                                                               #retour valeur H
 end
 
