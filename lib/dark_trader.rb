@@ -28,17 +28,14 @@ def make_hash (list_symbol,list_value)
         tempory_hash = Hash.new                                                           #créa new tabH
 	#puts tempory_hash
         for a in 0..list_symbol.size-1 do                      #remplir temp h avec symb et value associé
-        #a = 0
-        #while a < list_symbol.size-1
-  
-		tempory_hash[list_symbol[a].text]=list_value[a].text     
-                #tab = []
-                #puts " valeur #{a}"
-                #tab = tempory_hash 
-                #puts tab []         
-            #a = a + 1
+                temp_hash = Hash.new
+                tempory_hash[list_symbol[a].text]=list_value[a].text.delete('$')                     
+                tempory_hash.each do |temp_hash|
+                  print "{ #{temp_hash [0]}"
+                  puts " => #{temp_hash [1]} },"
+                end  
 	end
-          puts tempory_hash  
+            
         return tempory_hash                                                               #retour valeur H
 end
 
