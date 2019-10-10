@@ -14,7 +14,7 @@ def perform
             #puts list_value
         crypto_hash = Hash.new                                                            #créa new tabH
         
-	crypto_hash = make_hash(list_symbol,list_value)                                   #récup tabH full
+	crypto_hash = hashage(list_symbol,list_value)                                   #récup tabH full
             #puts crypto_hash
 	return
 end
@@ -23,10 +23,10 @@ def nokogiri (path)
 	return Nokogiri::HTML(open(path)) 
 end
 
-def make_hash (list_symbol,list_value)
+def hashage (list_symbol,list_value)
 
         tempory_hash = Hash.new                                                           #créa new tabH
-	#puts tempory_hash
+	
         for a in 0..list_symbol.size-1 do                      #remplir temp h avec symb et value associé
                 temp_hash = Hash.new
                 tempory_hash[list_symbol[a].text]=list_value[a].text.delete('$')                     
